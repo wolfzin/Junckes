@@ -1,0 +1,183 @@
+/* Junckes · "Parada da BR-470, km 40" · demo WolfStudio */
+:root{--verde:#0B6B3A;--verde-esc:#08552E;--vermelho:#E2401C;--marrom:#5A2A1E;--kraft:#E9DCC3;--amarelo:#F6C343;--asfalto:#23272A;--fundo:#F3F2EE;--topo:96px}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--topo) + 12px)}
+body{margin:0;background:var(--fundo);color:var(--asfalto);font:400 1.0625rem/1.6 'Atkinson Hyperlegible',system-ui,sans-serif}
+img{display:block;max-width:100%;height:auto}
+figure,blockquote{margin:0}
+h1,h2,h3{font-family:'Overpass',system-ui,sans-serif;font-weight:800;line-height:1.08;margin:0 0 .45em}
+h2{font-size:clamp(1.8rem,3.6vw,2.8rem);text-transform:uppercase;letter-spacing:.01em}
+h3{font-size:1.35rem}
+p{margin:0 0 1em}
+a{color:inherit}
+:focus-visible{outline:4px solid var(--amarelo);outline-offset:3px;box-shadow:0 0 0 7px var(--asfalto)}
+.pular{position:absolute;left:12px;top:-80px;z-index:100;background:var(--amarelo);color:var(--asfalto);padding:12px 18px;font-weight:700;border-radius:8px}
+.pular:focus{top:12px}
+.faixa-demo{margin:0;background:var(--asfalto);color:#d8d8d2;font-size:.8125rem;text-align:center;padding:4px 12px}
+
+/* placa: painel verde com filete branco interno, como sinalização */
+.placa{background:var(--verde);color:#fff;border-radius:14px;box-shadow:inset 0 0 0 4px var(--verde),inset 0 0 0 7px #fff}
+
+.topo{position:sticky;top:0;z-index:50;background:var(--fundo);padding:8px 12px}
+.placa-topo{max-width:1256px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:12px 20px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none;min-height:44px;margin-right:auto}
+.marca span{display:flex;flex-direction:column;line-height:1.05}
+.marca strong{font:800 1.6rem/1 'Overpass',sans-serif;letter-spacing:.06em}
+.marca small{font-size:.82rem;opacity:.92}
+.status{margin:0;background:var(--amarelo);color:var(--asfalto);font:800 .92rem/1 'Overpass',sans-serif;text-transform:uppercase;letter-spacing:.03em;padding:10px 14px;border-radius:6px}
+.status[data-aberto="nao"]{background:#fff}
+.topo-acoes{display:flex;gap:10px}
+
+.bt{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:8px;font:800 1rem/1 'Overpass',sans-serif;text-transform:uppercase;letter-spacing:.03em;text-decoration:none;border:3px solid transparent;text-align:center}
+.bt-vermelho{background:var(--vermelho);color:#fff}
+.bt-vermelho:hover{background:#c23412}
+.bt-branco{background:#fff;color:var(--verde-esc)}
+.bt-branco:hover{background:#e9f3ed}
+.bt-amarelo{background:var(--amarelo);color:var(--asfalto)}
+
+/* hero: pórtico de rodovia sobre o asfalto */
+.hero{background:var(--asfalto);color:#fff;padding:30px 20px 0;position:relative;overflow:hidden}
+.portico{max-width:1216px;margin:0 auto;position:relative;padding-bottom:26px}
+.placa-hero{position:relative;z-index:2;display:grid;grid-template-columns:1.25fr 1fr;gap:10px 40px;padding:30px 36px;align-items:center}
+.placa-rodape{margin:0 0 12px;font:800 1.1rem/1 'Overpass',sans-serif;display:flex;align-items:center;gap:12px;text-transform:uppercase;letter-spacing:.04em}
+.km{background:#fff;color:var(--verde-esc);padding:6px 10px;border-radius:6px}
+.placa-hero h1{font-size:clamp(2rem,4.2vw,3.5rem);margin:0}
+.destinos{list-style:none;margin:0;padding:0 0 0 30px;border-left:3px solid #fff;display:grid;gap:12px}
+.destinos li{display:grid;grid-template-columns:48px 1fr;grid-template-rows:auto auto;column-gap:14px;align-items:center}
+.destinos .seta{grid-row:1/3;display:grid;place-items:center;width:48px;height:48px;border-radius:6px;background:#fff;color:var(--verde);font-size:1.7rem;font-weight:800}
+.destinos b{font:800 1.4rem/1.1 'Overpass',sans-serif;text-transform:uppercase}
+.destinos small{font-size:.95rem;opacity:.92}
+.poste{position:absolute;bottom:0;left:12%;width:14px;height:60px;background:linear-gradient(90deg,#8f969a,#c9cfd2 50%,#8f969a)}
+.poste-d{left:auto;right:12%}
+.hero-foto{max-width:1216px;margin:0 auto;position:relative}
+.hero-foto img{width:100%;height:clamp(200px,26vw,330px);object-fit:cover;object-position:50% 62%;border-radius:6px}
+.marco{position:absolute;right:18px;bottom:-26px;background:#fff;color:var(--asfalto);border:3px solid var(--asfalto);border-radius:8px 8px 4px 4px;width:78px;padding:6px 0;text-align:center;font-family:'Overpass',sans-serif;line-height:1;box-shadow:0 4px 0 rgba(0,0,0,.3)}
+.marco small{display:block;font-size:.7rem;font-weight:700}
+.marco b{display:block;font-size:1.6rem;font-weight:800;margin-bottom:4px}
+.hero-texto{max-width:1216px;margin:46px auto 18px;font-size:1.15rem;color:#e6e6e0;padding-right:40%}
+.hero-acoes{max-width:1216px;margin:0 auto;display:flex;flex-wrap:wrap;gap:12px;padding-bottom:46px}
+.faixa-estrada{height:12px;margin:0 -20px;background:repeating-linear-gradient(90deg,var(--amarelo) 0 60px,transparent 60px 100px);opacity:.95}
+
+.servicos,.trajeto,.galeria,.avaliacoes,.chegar{max-width:1256px;margin:0 auto;padding:68px 20px}
+.placas-servico{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.placas-servico .placa{padding:30px 28px}
+.pictograma{display:block;margin-bottom:16px}
+.hora{display:inline-block;background:#fff;color:var(--verde-esc);font:800 .95rem/1 'Overpass',sans-serif;text-transform:uppercase;padding:8px 10px;border-radius:4px}
+.placa-horario{margin-top:22px;background:#fff;border:4px solid var(--asfalto);border-radius:10px;padding:22px 26px;display:grid;grid-template-columns:auto 1fr;gap:6px 40px;align-items:center}
+.placa-horario h3{margin:0;text-transform:uppercase}
+.placa-horario dl{margin:0;display:flex;flex-wrap:wrap;gap:8px 36px}
+.placa-horario dt{font:800 .85rem/1 'Overpass',sans-serif;text-transform:uppercase;color:#5d625f}
+.placa-horario dd{margin:4px 0 0;font:800 1.6rem/1 'Overpass',sans-serif}
+.placa-horario p{grid-column:1/3;margin:6px 0 0;font-size:.92rem;color:#4a4f4c}
+
+.trajeto{position:relative}
+.marcos{list-style:none;margin:30px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative}
+.marcos::before{content:"";position:absolute;left:0;right:0;top:34px;height:14px;background:var(--asfalto);border-radius:3px;box-shadow:inset 0 5px 0 -1px var(--asfalto),inset 0 0 0 0}
+.marcos::after{content:"";position:absolute;left:0;right:0;top:40px;height:2px;background:repeating-linear-gradient(90deg,#fff 0 22px,transparent 22px 40px)}
+.marcos li{position:relative;padding-top:70px}
+.marcos b{position:absolute;top:0;left:0;z-index:1;background:#fff;border:3px solid var(--asfalto);border-radius:8px;font:800 1.5rem/1 'Overpass',sans-serif;padding:10px 12px;min-width:84px;text-align:center}
+.marcos span{display:block;font-size:1.08rem}
+.marcos small{display:block;color:#5d625f;font-size:.88rem;margin-top:4px}
+
+/* catálogo kraft */
+.catalogo{background-color:var(--kraft);background-image:repeating-linear-gradient(115deg,rgba(90,42,30,.035) 0 2px,transparent 2px 7px),repeating-linear-gradient(25deg,rgba(255,255,255,.18) 0 1px,transparent 1px 9px);color:var(--marrom);padding:72px max(20px,calc((100% - 1216px)/2))}
+.cat-topo{max-width:760px}
+.cat-topo h2{color:var(--marrom)}
+.aviso{background:#fff8e6;border-left:6px solid var(--vermelho);padding:10px 14px;color:var(--asfalto)}
+.potes{list-style:none;padding:0;margin:34px 0;display:grid;grid-template-columns:repeat(7,1fr);gap:16px}
+.pote{position:relative;display:flex;flex-direction:column;align-items:center}
+.tampa{width:70%;height:22px;border-radius:6px 6px 2px 2px;background:repeating-linear-gradient(90deg,#4a2218 0 6px,#5A2A1E 6px 12px);box-shadow:0 3px 0 #3b1a12}
+.rotulo{width:100%;aspect-ratio:3/3.6;margin-top:4px;border-radius:16px 16px 22px 22px;background:var(--fruta);display:flex;flex-direction:column;justify-content:center;align-items:center;position:relative;box-shadow:inset 8px 0 0 rgba(255,255,255,.18)}
+.rotulo::before{content:"";position:absolute;left:8%;right:8%;top:28%;bottom:24%;background:#fff;border-radius:6px;border-top:9px solid var(--verde)}
+.rotulo small,.rotulo b{position:relative;z-index:1;color:var(--marrom)}
+.rotulo small{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;margin-top:6px}
+.rotulo b{font:800 1.05rem/1.1 'Overpass',sans-serif;text-align:center}
+.cat-fotos{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:18px}
+.etiqueta{background:#fff;padding:10px 10px 12px;border-radius:4px;box-shadow:0 2px 0 rgba(90,42,30,.25)}
+.etiqueta img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.etiqueta figcaption{font:800 .95rem/1.2 'Overpass',sans-serif;text-transform:uppercase;margin-top:10px;color:var(--marrom)}
+.cat-acao{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px}
+.cat-acao p{margin:0;color:var(--asfalto)}
+.cat-acao p a{display:inline-flex;align-items:center;min-height:44px;font-weight:700}
+
+.gal{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:12px}
+.gal img{width:100%;height:100%;object-fit:cover;border-radius:6px}
+.g1{grid-column:span 2;grid-row:span 2}.g6{grid-column:span 4}
+
+.avaliacoes{display:grid;grid-template-columns:260px 1fr;gap:44px;align-items:center}
+.losango{width:190px;height:190px;margin:30px;transform:rotate(45deg);background:var(--amarelo);border:6px solid var(--asfalto);border-radius:14px;display:grid;place-items:center}
+.losango span{transform:rotate(-45deg);font:800 1.6rem/1 'Overpass',sans-serif;text-align:center}
+.losango b{display:block;font-size:3.4rem}
+.trechos{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.trechos li{background:#fff;border:3px solid var(--asfalto);border-radius:10px;padding:16px 20px}
+.trechos p{font-size:1.12rem;margin:0 0 4px}
+.trechos cite{font-style:normal;color:#5d625f;font-size:.9rem}
+
+.chegar{display:grid;grid-template-columns:1.2fr 1fr;gap:22px;align-items:stretch}
+.placa-saida{padding:34px 36px}
+.saida-tag{display:inline-block;background:var(--amarelo);color:var(--asfalto);font:800 1rem/1 'Overpass',sans-serif;padding:8px 12px;border-radius:4px;letter-spacing:.1em}
+.placa-saida h2{text-transform:none}
+.saida-acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.contatos{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.contatos li{background:#fff;border-radius:10px;padding:12px 18px;border:2px solid #d9d8d1}
+.contatos span{display:block;font:800 .8rem/1 'Overpass',sans-serif;text-transform:uppercase;color:#5d625f}
+.contatos a,.contatos b{display:inline-flex;align-items:center;min-height:44px;font-weight:700;font-size:1.1rem;word-break:break-word}
+
+.rodape{background:var(--asfalto);color:#d8d8d2;text-align:center;padding:30px 20px 34px;font-size:.92rem;border-top:10px solid transparent;border-image:repeating-linear-gradient(90deg,#fff 0 40px,var(--asfalto) 40px 70px) 10}
+.rodape p{margin:4px 0}
+
+@media (max-width:1000px){
+  .placa-topo{flex-wrap:wrap}
+  .status{order:3;width:100%;text-align:center}
+  .placa-hero{grid-template-columns:1fr}
+  .destinos{border-left:0;border-top:3px solid #fff;padding:18px 0 0}
+  .hero-texto{padding-right:0}
+  .potes{grid-template-columns:repeat(4,1fr)}
+}
+@media (max-width:760px){
+  :root{--topo:150px}
+  .topo{padding:6px 8px}
+  .placa-topo{padding:12px 14px;gap:10px}
+  .marca strong{font-size:1.3rem}
+  .marca small{font-size:.72rem}
+  .topo-acoes{width:100%}
+  .topo-acoes .bt{flex:1;min-height:44px;padding:0 10px}
+  .topo-acoes .bt-branco{display:none}
+  .status{order:0;width:auto;font-size:.75rem;padding:8px 10px}
+  .topo-acoes{order:4}
+  .hero{padding:20px 16px 0}
+  .placa-hero{padding:24px 20px}
+  .destinos b{font-size:1.15rem}
+  .marco{top:12px;bottom:auto;right:12px;width:64px}
+  .marco b{font-size:1.3rem}
+  .hero-texto{margin-top:26px}
+  .servicos,.trajeto,.galeria,.avaliacoes,.chegar{padding:52px 16px}
+  .placas-servico{grid-template-columns:1fr}
+  .placa-horario{grid-template-columns:1fr}
+  .placa-horario p{grid-column:1}
+  .marcos{grid-template-columns:1fr;gap:0}
+  .marcos::before,.marcos::after{display:none}
+  .marcos li{padding:0 0 22px 104px;min-height:70px;border-left:0}
+  .marcos b{top:0}
+  .catalogo{padding:52px 16px}
+  .potes{grid-template-columns:repeat(3,1fr);gap:12px}
+  .cat-fotos{grid-template-columns:1fr}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
+  .g6{grid-column:span 2}
+  .avaliacoes{grid-template-columns:1fr;gap:10px}
+  .losango{width:140px;height:140px;margin:24px auto}
+  .losango b{font-size:2.6rem}
+  .chegar{grid-template-columns:1fr}
+  .placa-saida{padding:28px 22px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+@media (max-width:760px){
+  :root{--topo:0px}
+  .topo{position:static}
+  .placa-topo{display:grid;grid-template-columns:1fr auto;align-items:center}
+  .marca{grid-column:1/3}
+  .status{order:0}
+  .topo-acoes{order:0;width:auto}
+  .topo-acoes .bt{padding:0 22px}
+}

@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Junckes · Restaurante &amp; Café colonial · BR-470, km 40, Gaspar/SC</title>
+<meta name="description" content="Café colonial desde as 5h30, almoço com fogão à lenha e produtos coloniais com rótulo próprio. BR-470, km 40, Gaspar/SC.">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/junckes.css">
+<style>
+/* ===== Movimento (WolfStudio v3) — só roda com JS e sem "reduzir movimento" ===== */
+:root{--e:cubic-bezier(.2,.7,.2,1)}
+.anim :is(.servicos h2,.placas-servico li,.placa-horario,.trajeto h2,.marcos li,.cat-topo,.potes li,.cat-fotos figure,.cat-acao,.galeria h2,.gal li,.losango,.av-texto>*,.placa-saida,.contatos li){transition:opacity .7s var(--e) var(--d,0ms),translate .8s var(--e) var(--d,0ms),scale .8s var(--e) var(--d,0ms),rotate .8s var(--e) var(--d,0ms),transform .35s var(--e),box-shadow .35s,border-color .25s,background-color .25s}
+.anim :is(.servicos h2,.placas-servico li,.placa-horario,.trajeto h2,.marcos li,.cat-topo,.potes li,.cat-fotos figure,.cat-acao,.galeria h2,.gal li,.losango,.av-texto>*,.placa-saida,.contatos li):not(.in){opacity:0;translate:var(--tx,0px) var(--ty,22px);scale:var(--sc,1)}
+@keyframes sobe{from{opacity:0;translate:0 18px}}
+@keyframes gira{to{rotate:360deg}}
+@media print{.anim *{opacity:1!important;translate:none!important;scale:none!important;clip-path:none!important}}
+[id]{scroll-margin-top:84px}
+.bt{transition:transform .2s var(--e),box-shadow .2s,background-color .2s}
+.bt:hover{transform:translateY(-2px)}
+/* hero: os postes sobem, a placa desce balançando e o marco da BR aparece */
+.poste{transform-origin:50% 100%;animation:poste .7s var(--e) both}
+.poste-d{animation-delay:.08s}
+@keyframes poste{from{scale:1 0}}
+.placa-hero{transform-origin:50% 0;animation:placa 1.2s cubic-bezier(.3,1.2,.4,1) .3s both}
+@keyframes placa{0%{opacity:0;translate:0 -24px;rotate:-2.5deg}55%{rotate:1deg}80%{rotate:-.4deg}100%{rotate:0deg}}
+.destinos li{animation:sobe .6s var(--e) both}
+.destinos li:nth-child(1){animation-delay:.8s}.destinos li:nth-child(2){animation-delay:.92s}.destinos li:nth-child(3){animation-delay:1.04s}
+.destinos .seta{display:inline-block;transition:translate .3s var(--e)}
+.destinos li:hover .seta{translate:3px -3px}
+.hero-foto{animation:sobe .9s var(--e) .5s both}
+.marco{animation:carimba .5s cubic-bezier(.3,1.4,.5,1) 1.2s both}
+@keyframes carimba{from{opacity:0;scale:1.8}}
+.hero-texto,.hero-acoes{animation:sobe .8s var(--e) .7s both}
+.faixa-estrada{animation:estrada 2.4s linear infinite}
+@keyframes estrada{to{background-position:-100px 0}}
+/* placas de serviço e catálogo */
+.placas-servico li{transition:transform .3s var(--e),box-shadow .3s}
+.placas-servico li:hover{transform:translateY(-5px)}
+.pictograma{transition:rotate .4s cubic-bezier(.3,1.6,.5,1)}
+.placas-servico li:hover .pictograma{rotate:-6deg}
+.anim .potes li{--sc:.6;--ty:0px}
+.pote{transition:transform .3s var(--e)}
+.pote:hover{transform:translateY(-6px)}
+.tampa{transition:rotate .35s var(--e)}
+.pote:hover .tampa{rotate:-12deg}
+.anim .marcos li{--ty:18px}
+.gal li{overflow:hidden}
+.gal li img{transition:scale 1s var(--e)}
+.gal li:hover img{scale:1.06}
+.anim .gal li{--sc:.95;--ty:0px}
+/* avaliação: o losango gira até a posição */
+.anim .losango:not(.in){rotate:-90deg}
+.anim .losango{--sc:.5;--ty:0px}
+.losango b{font-variant-numeric:tabular-nums}
+.placa-saida:hover{transform:translateY(-3px)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+<script>(function(d){if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion:reduce)').matches)d.classList.add('anim')})(document.documentElement)</script>
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<p class="faixa-demo">Demonstração WolfStudio — não é o site oficial.</p>
+
+<header class="topo">
+  <div class="placa placa-topo">
+    <a class="marca" href="#inicio" aria-label="Junckes, início">
+      <svg class="xicara" viewBox="0 0 48 48" width="40" height="40" aria-hidden="true"><path d="M24 4c5 6-4 8 0 15 1 2 4 3 4 3s-9 1-10-6c-1-5 5-7 6-12z" fill="#E2401C"/><path d="M8 24h28v6a12 12 0 0 1-12 12h-4A12 12 0 0 1 8 30z" fill="#fff"/><path d="M36 27h3a5 5 0 0 1 0 10h-4" fill="none" stroke="#fff" stroke-width="3"/></svg>
+      <span><strong>JUNCKES</strong><small>Restaurante &amp; Café · Produtos Coloniais</small></span>
+    </a>
+    <p class="status" id="status" aria-live="polite">Seg a sex 5h30–20h</p>
+    <div class="topo-acoes">
+      <a class="bt bt-branco" href="#chegar">Como chegar</a>
+      <a class="bt bt-vermelho" href="tel:+554733970904">Ligar</a>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+  <section class="hero" id="inicio" aria-labelledby="titulo">
+    <div class="portico">
+      <div class="placa placa-hero">
+        <div class="ph-titulo">
+          <p class="placa-rodape"><span class="km">BR-470</span> km 40 · Gaspar/SC</p>
+          <h1 id="titulo">Desde as 5h30, café colonial na beira da 470.</h1>
+        </div>
+        <ul class="destinos" role="list">
+          <li><span class="seta" aria-hidden="true">↑</span><b>Café colonial</b><small>a partir das 5h30</small></li>
+          <li><span class="seta" aria-hidden="true">↗</span><b>Almoço</b><small>buffet, fogão à lenha</small></li>
+          <li><span class="seta" aria-hidden="true">→</span><b>Café da tarde</b><small>bolos, tortas e cucas</small></li>
+        </ul>
+      </div>
+      <span class="poste" aria-hidden="true"></span><span class="poste poste-d" aria-hidden="true"></span>
+    </div>
+    <figure class="hero-foto">
+      <img width="1500" height="843" src="assets/img/fachada-placa-restaurante.jpg" alt="Fachada do Restaurante Junckes na BR-470, com a placa vermelha da casa e o letreiro Restaurante" fetchpriority="high">
+      <span class="marco" aria-hidden="true"><small>BR</small><b>470</b><small>km</small><b>40</b></span>
+    </figure>
+    <p class="hero-texto">Pães caseiros, cucas e geleias de fabricação própria logo cedo; almoço com fogão à lenha. Fica no sentido da BR-101, no caminho de quem desce para a praia.</p>
+    <div class="hero-acoes">
+      <a class="bt bt-amarelo" href="#chegar">Como chegar</a>
+      <a class="bt bt-vermelho" href="tel:+554733970904">Ligar (47) 3397-0904</a>
+    </div>
+    <div class="faixa-estrada" aria-hidden="true"></div>
+  </section>
+
+  <section class="servicos" id="servicos" aria-labelledby="t-serv">
+    <h2 id="t-serv">O que tem na parada</h2>
+    <ul class="placas-servico" role="list">
+      <li class="placa">
+        <svg class="pictograma" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true"><rect width="64" height="64" rx="8" fill="#fff"/><path d="M14 28h30v8a12 12 0 0 1-12 12h-6a12 12 0 0 1-12-12z" fill="#0B6B3A"/><path d="M44 31h4a5 5 0 0 1 0 10h-5" fill="none" stroke="#0B6B3A" stroke-width="4"/><path d="M22 12c3 4-3 6 0 11M30 12c3 4-3 6 0 11" fill="none" stroke="#0B6B3A" stroke-width="3" stroke-linecap="round"/></svg>
+        <h3>Café da manhã colonial</h3>
+        <p class="hora">a partir das 5h30</p>
+        <p>Pães caseiros, cucas e geleias de fabricação própria.</p>
+      </li>
+      <li class="placa">
+        <svg class="pictograma" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true"><rect width="64" height="64" rx="8" fill="#fff"/><path d="M20 10v18m-5-18v10a5 5 0 0 0 10 0V10M20 30v24" fill="none" stroke="#0B6B3A" stroke-width="4" stroke-linecap="round"/><path d="M42 10c-6 3-6 16 0 18v26" fill="none" stroke="#0B6B3A" stroke-width="4" stroke-linecap="round"/></svg>
+        <h3>Almoço</h3>
+        <p class="hora">buffet com fogão à lenha</p>
+        <p>Comida caseira; clientes citam comida alemã e chucrute. Valor: consulte no local.</p>
+      </li>
+      <li class="placa">
+        <svg class="pictograma" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true"><rect width="64" height="64" rx="8" fill="#fff"/><path d="M12 40l38-16v22H12z" fill="#0B6B3A"/><path d="M12 40l38-16" stroke="#0B6B3A" stroke-width="4"/><circle cx="40" cy="20" r="4" fill="#0B6B3A"/></svg>
+        <h3>Café da tarde</h3>
+        <p class="hora">café da tarde colonial</p>
+        <p>Bolos, tortas e cucas na vitrine, para a pausa da viagem.</p>
+      </li>
+    </ul>
+    <div class="placa-horario" role="group" aria-labelledby="t-hor">
+      <h3 id="t-hor">Horário</h3>
+      <dl>
+        <div><dt>Seg a sex</dt><dd>5h30 – 20h</dd></div>
+        <div><dt>Sábado</dt><dd>5h30 – 19h*</dd></div>
+        <div><dt>Domingo</dt><dd>fechado</dd></div>
+      </dl>
+      <p>*Horário do Google. Uma matéria de 2020 falava em 20h aos sábados: confirme por telefone.</p>
+    </div>
+  </section>
+
+  <section class="trajeto" aria-labelledby="t-traj">
+    <h2 id="t-traj">Da geleia ao restaurante</h2>
+    <ol class="marcos" role="list">
+      <li><b>2005</b><span>Começa a produção de geleias.</span></li>
+      <li><b>2010</b><span>Cinco anos depois, abre o restaurante.</span></li>
+      <li><b>2020</b><span>“vendemos 100 pães e 50 pedaços de cuca por dia”</span><small>Jornal Metas, 19/06/2020</small></li>
+      <li><b>hoje</b><span>Café colonial, almoço e café da tarde, de segunda a sábado.</span></li>
+    </ol>
+  </section>
+
+  <section class="catalogo" id="catalogo" aria-labelledby="t-cat">
+    <div class="cat-topo">
+      <h2 id="t-cat">Catálogo colonial</h2>
+      <p>Geleias, cucas e biscoitos com rótulo próprio. Os sabores abaixo estão nas plaquinhas da vitrine da casa.</p>
+      <p class="aviso"><strong>Disponibilidade, venda para levar e preços: a confirmar com a loja.</strong></p>
+    </div>
+    <ul class="potes" role="list">
+      <li class="pote" style="--fruta:#6E3B5C"><span class="tampa" aria-hidden="true"></span><span class="rotulo"><small>geleia</small><b>Figo</b></span></li>
+      <li class="pote" style="--fruta:#C27A2C"><span class="tampa" aria-hidden="true"></span><span class="rotulo"><small>geleia</small><b>Xinxim</b></span></li>
+      <li class="pote" style="--fruta:#E0AE1E"><span class="tampa" aria-hidden="true"></span><span class="rotulo"><small>geleia</small><b>Carambola</b></span></li>
+      <li class="pote" style="--fruta:#C99A3C"><span class="tampa" aria-hidden="true"></span><span class="rotulo"><small>geleia</small><b>Banana</b></span></li>
+      <li class="pote" style="--fruta:#E9B22E"><span class="tampa" aria-hidden="true"></span><span class="rotulo"><small>geleia</small><b>Abacaxi</b></span></li>
+      <li class="pote" style="--fruta:#3A1D2A"><span class="tampa" aria-hidden="true"></span><span class="rotulo"><small>geleia</small><b>Jabuticaba</b></span></li>
+      <li class="pote" style="--fruta:#B8202F"><span class="tampa" aria-hidden="true"></span><span class="rotulo"><small>geleia</small><b>Morango</b></span></li>
+    </ul>
+    <div class="cat-fotos">
+      <figure class="etiqueta"><img loading="lazy" decoding="async" width="960" height="720" src="assets/img/geleias-rotuladas.jpg" alt="Potes de geleia na vitrine com plaquinhas dos sabores"><figcaption>As plaquinhas da vitrine</figcaption></figure>
+      <figure class="etiqueta"><img loading="lazy" decoding="async" width="1200" height="675" src="assets/img/produtos-coloniais-embalados.jpg" alt="Produtos coloniais embalados com o rótulo Junckes: pão, pote de geleia e biscoitos"><figcaption>Embalados com rótulo da casa</figcaption></figure>
+      <figure class="etiqueta"><img loading="lazy" decoding="async" width="1100" height="619" src="assets/img/cuca-de-banana.jpg" alt="Cuca de banana inteira com cobertura caramelizada"><figcaption>Cuca de banana</figcaption></figure>
+    </div>
+    <div class="cat-acao">
+      <a class="bt bt-vermelho" href="tel:+554733970904">Ligar e perguntar o que tem hoje</a>
+      <p>Celular da casa: <a href="tel:+5547984161148">(47) 98416-1148</a> (se atende WhatsApp: a confirmar).</p>
+    </div>
+  </section>
+
+  <section class="galeria" aria-labelledby="t-gal">
+    <h2 id="t-gal">No buffet e na vitrine</h2>
+    <ul class="gal" role="list">
+      <li class="g1"><img loading="lazy" decoding="async" width="1100" height="619" src="assets/img/buffet-pratos-quentes.jpg" alt="Buffet de pratos quentes em cubas de inox"></li>
+      <li class="g2"><img loading="lazy" decoding="async" width="1100" height="619" src="assets/img/carne-assada.jpg" alt="Carne assada fatiada no buffet"></li>
+      <li class="g3"><img loading="lazy" decoding="async" width="1100" height="619" src="assets/img/buffet-saladas.jpg" alt="Saladas no buffet"></li>
+      <li class="g4"><img loading="lazy" decoding="async" width="960" height="720" src="assets/img/bolo-de-milho-cafe-colonial.jpg" alt="Bolo de milho e outros bolos no café colonial"></li>
+      <li class="g5"><img loading="lazy" decoding="async" width="720" height="720" src="assets/img/torta-morangos.jpg" alt="Torta decorada com morangos"></li>
+      <li class="g6"><img loading="lazy" decoding="async" width="960" height="540" src="assets/img/vitrine-frios-tortas.jpg" alt="Vitrine refrigerada com frios e tortas"></li>
+    </ul>
+  </section>
+
+  <section class="avaliacoes" aria-labelledby="t-av">
+    <div class="losango" aria-hidden="true"><span><b>4,5</b>★</span></div>
+    <div class="av-texto">
+      <h2 id="t-av">4,5 no Google, com 666 avaliações</h2>
+      <ul class="trechos" role="list">
+        <li><blockquote><p>“Sempre que Desço pra praia passo almoçar aqui…”</p><cite>Alexsandra, abr/2026</cite></blockquote></li>
+        <li><blockquote><p>“Ótimo atendimento,comida muito boa e café bem no estilo colonial,recomendo”</p><cite>destaque do Google</cite></blockquote></li>
+        <li><blockquote><p>“Tudo muito fresco, muitas opções de pratos e sobremesas!”</p><cite>destaque do Google</cite></blockquote></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="chegar" id="chegar" aria-labelledby="t-chegar">
+    <div class="placa placa-saida">
+      <p class="saida-tag">SAÍDA</p>
+      <h2 id="t-chegar">BR-470, km 40 · Gaspar/SC</h2>
+      <p>Sentido BR-101, no caminho para a praia. Estacionamento no local.</p>
+      <div class="saida-acoes">
+        <a class="bt bt-branco" href="https://www.google.com/maps/search/?api=1&amp;query=Restaurante%20Junckes%2C%20BR-470%2C%20Gaspar%20SC" target="_blank" rel="noopener">Abrir no Google Maps</a>
+        <a class="bt bt-branco" href="https://waze.com/ul?q=Restaurante%20Junckes%20Gaspar" target="_blank" rel="noopener">Abrir no Waze</a>
+      </div>
+    </div>
+    <ul class="contatos" role="list">
+      <li><span>Telefone fixo</span><a href="tel:+554733970904">(47) 3397-0904</a></li>
+      <li><span>Celular</span><a href="tel:+5547984161148">(47) 98416-1148</a></li>
+      <li><span>E-mail</span><a href="mailto:junckescafecolonial@hotmail.com">junckescafecolonial@hotmail.com</a></li>
+      <li><span>Pagamento</span><b>aceita cartões</b></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="rodape">
+  <p><strong>Junckes</strong> · Indústria e Comércio de Alimentos Junckes Ltda · CNPJ 07.314.979/0001-11</p>
+  <p>Demonstração feita por WolfStudio.</p>
+</footer>
+<script src="assets/js/junckes.js"></script>
+<script>
+/* Movimento (WolfStudio v3): revelar ao rolar, contadores e menu ativo. */
+(function(){
+  var R=document.documentElement; if(!R.classList.contains('anim')) return;
+  try{
+    var SEL='.servicos h2,.placas-servico li,.placa-horario,.trajeto h2,.marcos li,.cat-topo,.potes li,.cat-fotos figure,.cat-acao,.galeria h2,.gal li,.losango,.av-texto>*,.placa-saida,.contatos li', CNT='.losango b';
+    var io=new IntersectionObserver(function(es){
+      var n=0;
+      es.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var el=e.target; io.unobserve(el);
+        if(n) el.style.setProperty('--d',Math.min(n,7)*90+'ms');
+        n++; el.classList.add('in');
+        setTimeout(function(){el.style.removeProperty('--d')},1700);
+      });
+    },{threshold:.08,rootMargin:'0px 0px -5% 0px'});
+    var pend=[].slice.call(document.querySelectorAll(SEL));
+    pend.forEach(function(el){io.observe(el)});
+    /* rolagem rápida pode pular um bloco: o que já ficou para cima aparece sem esperar */
+    var tv=0;
+    function varre(){pend=pend.filter(function(el){
+      if(el.classList.contains('in')) return false;
+      if(el.getBoundingClientRect().bottom<0){io.unobserve(el);el.classList.add('in');return false}
+      return true;
+    })}
+
+    function conta(el){
+      var tn=null;
+      [].some.call(el.childNodes,function(c){if(c.nodeType===3&&/\d,\d/.test(c.nodeValue)){tn=c;return true}});
+      if(!tn) return;
+      var full=tn.nodeValue, m=full.match(/(\d+),(\d)/), alvo=parseFloat(m[1]+'.'+m[2]), t0=null;
+      function f(t){
+        if(!t0) t0=t;
+        var p=Math.min(1,(t-t0)/1100), v=alvo*(1-Math.pow(1-p,3));
+        tn.nodeValue=p<1?full.replace(m[0],v.toFixed(1).replace('.',',')):full;
+        if(p<1) requestAnimationFrame(f);
+      }
+      requestAnimationFrame(f);
+    }
+    var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){cio.unobserve(e.target);conta(e.target)}})},{threshold:.6});
+    [].forEach.call(document.querySelectorAll(CNT),function(el){cio.observe(el)});
+
+    var links=[].slice.call(document.querySelectorAll('nav a[href^="#"]')), mapa={};
+    var sio=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting) return;
+      links.forEach(function(a){a.classList.remove('on')}); mapa[e.target.id].classList.add('on');
+    })},{rootMargin:'-40% 0px -55% 0px'});
+    links.forEach(function(a){var s=document.getElementById(a.getAttribute('href').slice(1)); if(s&&s.id!=='conteudo'){mapa[s.id]=a;sio.observe(s)}});
+
+    var espera=false;
+    function rolar(){
+      espera=false; var y=window.scrollY||0;
+      R.classList.toggle('rolou',y>8);
+      clearTimeout(tv); if(pend.length) tv=setTimeout(varre,180);
+      if(y<160) links.forEach(function(a){a.classList.remove('on')});
+
+    }
+    window.addEventListener('scroll',function(){if(!espera){espera=true;requestAnimationFrame(rolar)}},{passive:true});
+    window.addEventListener('resize',rolar);
+    rolar();
+
+  }catch(err){R.classList.remove('anim')}
+})();
+</script>
+</body>
+</html>
